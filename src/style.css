@@ -203,6 +203,11 @@ header .logo {
   background-color: #4d4d4d;
 }
 
+.threejs {
+  width: 500px;
+  height: 500px;
+}
+
 @media (max-width: 768px) {
   header {
     flex-direction: column;
