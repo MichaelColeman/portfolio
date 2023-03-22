@@ -8,7 +8,7 @@
   --color-style-5: #6b9396;
   --color-style-6: #69c8d6;
   --max-width-main: 1000px;
-  --hero-section-height: 500px;
+  --hero-section-height: 450px;
 }
 
 /*
@@ -128,7 +128,7 @@ header .logo {
   align-items: center;
   gap: 30px;
   margin: 0 auto 0 auto;
-  padding: 50px;
+  padding: 0px 40px 10px 40px;
   max-width: var(--max-width-main);
   height: var(--hero-section-height);
 }
@@ -226,7 +226,7 @@ header .logo {
   }
 
   .hero-aside {
-    gap: 30px;
+    gap: 15px;
   }
 }
 
