@@ -9,9 +9,14 @@
   --color-bg-2: #333333;
   --color-text-1: #111111;
   --color-text-2: #222222;
-  --color-rect: var(--color-style-1);
-  --max-width-main: 1000px;
+  --max-width-main: 1200px;
 }
+
+/*
+//
+//  CSS reset
+//
+*/
 
 *,
 *::before,
@@ -57,16 +62,14 @@ select {
   font: inherit;
 }
 
-main-wrapper {
-  max-width: 1000px;
-}
-
 body {
   background-color: var(--color-style-4);
 }
 
 /*
-  Header
+//
+//  Header
+//
 */
 
 header {
@@ -76,23 +79,20 @@ header {
   align-items: center;
   margin: 0 auto 0 auto;
   padding: 0 20px 0 20px;
-  max-width: 1000px;
+  max-width: var(--max-width-main);
   min-height: 100px;
-  color: black;
   font-family: 'Open Sans';
   white-space: nowrap;
 }
 
 header nav {
   display: flex;
-  flex-grow: 1;
   flex-shrink: 1;
   justify-content: space-between;
-  gap: 10px;
-  max-width: fit-content;
+  gap: 15px;
 }
 
-header a {
+header nav a {
   color: var(--color-style-3);
   text-decoration: none;
 }
@@ -100,34 +100,31 @@ header a {
 header .logo {
   display: flex;
   flex-shrink: 1;
-  max-width: fit-content;
   color: var(--color-style-2);
   font-weight: 800;
   font-size: 2rem;
+  text-decoration: none;
   text-transform: uppercase;
 }
 
 .rect {
   align-self: center;
-  background-color: var(--color-rect);
+  background-color: var(--color-style-1);
   width: 2px;
-  height: 1rem;
+  height: 1.2rem;
 }
 
 @media (max-width: 768px) {
   header {
-    justify-content: space-evenly;
-  }
-}
-
-@media (max-width: 480px) {
-  header {
+    flex-direction: column;
+    justify-content: space-around;
   }
 
   header nav {
     align-items: center;
+    font-size: 0.7rem;
   }
+}
 
-  header .logo {
-  }
+@media (max-width: 480px) {
 }
