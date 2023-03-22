@@ -7,11 +7,7 @@
   --color-style-4: #181818;
   --color-style-5: #6b9396;
   --color-style-6: #69c8d6;
-  --color-bg-1: #000000;
-  --color-bg-2: #333333;
-  --color-text-1: #111111;
-  --color-text-2: #222222;
-  --max-width-main: 1200px;
+  --max-width-main: 1000px;
   --hero-section-height: 400px;
 }
 
@@ -108,7 +104,7 @@ header .logo {
   flex-shrink: 1;
   color: var(--color-style-2);
   font-weight: 800;
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -148,6 +144,7 @@ header .logo {
 .hero-image-container {
   display: flex;
   flex-shrink: 1;
+  filter: opacity(80%);
   box-shadow: 0px 0px 70px var(--color-style-1);
   border: 5px solid var(--color-style-5);
   border-radius: 50%;
