@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bitter&family=Open+Sans:wght@400;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@400;700&family=Open+Sans:wght@400;600;800&family=Source+Sans+Pro&display=swap');
 
 :root {
   --color-style-1: #368ac2;
@@ -7,6 +7,11 @@
   --color-style-4: #181818;
   --color-style-5: #6b9396;
   --color-style-6: #69c8d6;
+  --color-full-stack: #ea4e56;
+  --color-shopify: #96bf48;
+  --color-wordpress: #21759b;
+  --color-javascript: #f7df1e;
+  --color-front-end: #368ac2;
   --max-width-main: 1000px;
   --hero-section-height: 450px;
 }
@@ -64,6 +69,7 @@ select {
 
 body {
   background-color: var(--color-style-4);
+  color: var(--color-style-3);
 }
 
 /*
@@ -77,11 +83,11 @@ header {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  margin: 0 auto 0 auto;
-  padding: 0 40px 0 40px;
+  margin: 0px auto 0px auto;
+  padding: 0px 40px 0px 40px;
   max-width: var(--max-width-main);
   min-height: 100px;
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', sans-serif;
   white-space: nowrap;
 }
 
@@ -111,6 +117,7 @@ header .logo {
 
 .rect {
   align-self: center;
+  border-radius: 2px;
   background-color: var(--color-style-1);
   width: 2px;
   height: 1.2rem;
@@ -183,6 +190,7 @@ header .logo {
   justify-content: end;
   width: 100%;
 }
+
 .hero-links img {
   display: inline;
 }
@@ -207,11 +215,116 @@ header .logo {
 }
 
 .long-line {
-  margin-left: 50px;
+  position: absolute;
+  left: 50px;
   border-radius: 3px;
   background-image: linear-gradient(to bottom, var(--color-style-1), var(--color-style-5));
   width: 3px;
   height: 750px;
+}
+
+/*
+//
+//  Work Section
+//
+*/
+
+.work {
+  display: flex;
+  margin: 0px auto 0px auto;
+  padding: 0px 40px 0px 40px;
+  max-width: var(--max-width-main);
+  color: var(--color-style-3);
+}
+
+/*every other card will hage these properties*/
+.card-container:nth-child(odd) {
+  justify-content: flex-end;
+}
+
+.card-container {
+}
+
+.card {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.card-image-container {
+  min-width: 275px;
+  /* overflow: hidden; */
+}
+
+.card img {
+  box-shadow: 0px 0px 10px #dadada49;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  /* object-fit: cover; */
+}
+
+.card-aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  max-width: 400px;
+}
+
+.card-text {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.card-title {
+  margin-bottom: 1rem;
+  font-weight: bold;
+  font-size: 1.3rem;
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+}
+
+/*
+//
+//  Badges
+//
+*/
+
+.card-badges {
+  padding-left: 10px;
+}
+
+.badge {
+  display: inline-block;
+  border-radius: 10px;
+  background-color: var(--color-style-2);
+  padding: 2px 10px 2px 10px;
+  max-width: fit-content;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.75rem;
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+}
+
+.shopify {
+  background-color: var(--color-shopify);
+}
+
+.full-stack {
+  background-color: var(--color-full-stack);
+}
+
+.javascript {
+  background-color: var(--color-javascript);
+  color: var(--color-style-4);
+}
+
+.front-end {
+  background-color: var(--color-front-end);
+}
+
+.wordpress {
+  background-color: var(--color-wordpress);
 }
 
 @media (max-width: 768px) {
@@ -228,15 +341,21 @@ header .logo {
   .hero-aside {
     gap: 15px;
   }
+
+  .card {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 480px) {
   .hero-section {
     flex-direction: column;
   }
+
   .hero-links {
     justify-content: start;
   }
+
   .hero-image-container {
     gap: 5px;
   }
