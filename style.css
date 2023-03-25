@@ -236,13 +236,15 @@ header .logo {
   max-width: var(--max-width-main);
   color: var(--color-style-3);
 }
+/* 
+.card:nth-child(even) {
+  flex-direction: row-reverse;
+} */
 
-/*every other card will hage these properties*/
-.card-container:nth-child(odd) {
-  justify-content: flex-end;
-}
-
-.card-container {
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 125px;
 }
 
 .card {
@@ -251,7 +253,9 @@ header .logo {
 }
 
 .card-image-container {
+  display: flex;
   min-width: 275px;
+  max-width: 50%;
   /* overflow: hidden; */
 }
 
