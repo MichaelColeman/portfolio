@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@400;700&family=Open+Sans:wght@400;600;800&family=Source+Sans+Pro&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bitter:wght@400;700&family=Open+Sans:wght@400;600;800&family=Source+Sans+Pro&display=swap");
 
 :root {
   --color-style-1: #368ac2;
@@ -12,8 +12,8 @@
   --color-wordpress: #21759b;
   --color-javascript: #f7df1e;
   --color-front-end: #368ac2;
-  --max-width-main: 1000px;
-  --hero-section-height: 450px;
+  --max-width-main: 1200px;
+  --hero-section-height: 400px;
 }
 
 /*
@@ -87,7 +87,7 @@ header {
   padding: 0px 40px 0px 40px;
   max-width: var(--max-width-main);
   min-height: 100px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   white-space: nowrap;
 }
 
@@ -101,7 +101,7 @@ header nav {
 header nav a {
   color: var(--color-style-3);
   font-size: 0.875rem;
-  font-family: 'Bitter', serif;
+  font-family: "Bitter", serif;
   text-decoration: none;
 }
 
@@ -157,7 +157,11 @@ header .logo {
   box-shadow: 0px 0px 70px var(--color-style-1);
   border: 5px solid var(--color-style-5);
   border-radius: 50%;
-  background: linear-gradient(-45deg, var(--color-style-1) 40%, var(--color-style-6) 60%);
+  background: linear-gradient(
+    -45deg,
+    var(--color-style-1) 40%,
+    var(--color-style-6) 60%
+  );
   height: 200px;
   overflow: hidden;
 }
@@ -166,7 +170,7 @@ header .logo {
   color: var(--color-style-3);
   font-weight: 600;
   font-size: 1.3rem;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .hero-bold {
@@ -182,7 +186,7 @@ header .logo {
   -webkit-background-clip: text;
   background-clip: text;
   font-weight: 800;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .hero-links {
@@ -205,7 +209,7 @@ header .logo {
   padding: 5px;
   color: var(--color-style-3);
   font-size: 0.875rem;
-  font-family: 'Bitter', serif;
+  font-family: "Bitter", serif;
   text-decoration: none;
 }
 
@@ -218,9 +222,34 @@ header .logo {
   position: absolute;
   left: 50px;
   border-radius: 3px;
-  background-image: linear-gradient(to bottom, var(--color-style-1), var(--color-style-5));
+  background-image: linear-gradient(
+    to bottom,
+    var(--color-style-1),
+    var(--color-style-5)
+  );
   width: 3px;
   height: 750px;
+}
+
+.tech-stack-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+}
+
+.tech-stack-list {
+  color: var(--color-style-3);
+  font-weight: bold;
+  font-size: 1rem;
+  font-family: "Source Sans Pro", sans-serif;
+  text-transform: uppercase;
+}
+
+.tech-stack-list .line {
+  background-color: var(--color-style-3);
+  width: 90px;
+  height: 1px;
 }
 
 /*
@@ -231,7 +260,7 @@ header .logo {
 
 .work {
   display: flex;
-  margin: 0px auto 0px auto;
+  margin: 200px auto 0px auto;
   padding: 0px 40px 0px 40px;
   max-width: var(--max-width-main);
   color: var(--color-style-3);
@@ -276,14 +305,14 @@ header .logo {
 }
 
 .card-text {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 .card-title {
   margin-bottom: 1rem;
   font-weight: bold;
   font-size: 1.3rem;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   text-transform: uppercase;
 }
 
@@ -306,7 +335,7 @@ header .logo {
   color: #ffffff;
   font-weight: 700;
   font-size: 0.75rem;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   text-transform: uppercase;
 }
 
