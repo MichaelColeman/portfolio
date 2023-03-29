@@ -7,21 +7,12 @@
   --color-style-4: #181818;
   --color-style-5: #6b9396;
   --color-style-6: #69c8d6;
-  --color-full-stack: #ea4e56;
-  --color-shopify: #96bf48;
-  --color-wordpress: #21759b;
-  --color-javascript: #f7df1e;
-  --color-front-end: #368ac2;
-  --max-width-main: 1200px;
-  --hero-section-height: 400px;
+  --max-width-main: 1300px;
 }
 
 /*
-//
-//  CSS reset
-//
+  CSS reset
 */
-
 *,
 *::before,
 *::after {
@@ -30,11 +21,6 @@
 
 * {
   margin: 0;
-}
-
-li,
-ul {
-  list-style: none;
 }
 
 /* 3. Allow percentage-based heights in the application */
@@ -65,7 +51,10 @@ textarea,
 select {
   font: inherit;
 }
-/* end css reset */
+
+/*
+  end css reset
+*/
 
 body {
   background-color: var(--color-style-4);
@@ -73,9 +62,7 @@ body {
 }
 
 /*
-//
-//  Header
-//
+  Header
 */
 
 header {
@@ -115,7 +102,7 @@ header .logo {
   text-transform: uppercase;
 }
 
-.rect {
+.nav-spacer {
   align-self: center;
   border-radius: 2px;
   background-color: var(--color-style-1);
@@ -124,9 +111,7 @@ header .logo {
 }
 
 /*
-//
-//  Hero Section
-//
+  Hero Section
 */
 
 .hero-section {
@@ -137,7 +122,7 @@ header .logo {
   margin: 0 auto 0 auto;
   padding: 0px 40px 10px 40px;
   max-width: var(--max-width-main);
-  height: var(--hero-section-height);
+  height: 400px;
 }
 
 .hero-image-container {
@@ -233,9 +218,7 @@ header .logo {
 }
 
 /*
-//
-//  Tech Stack
-//
+  Tech Stack
 */
 
 .tech-stack-list {
@@ -263,9 +246,7 @@ header .logo {
 }
 
 /*
-//
-//  Work Section
-//
+  Work Section
 */
 
 .work {
@@ -296,7 +277,6 @@ header .logo {
   display: flex;
   min-width: 275px;
   max-width: 500px;
-  /* overflow: hidden; */
 }
 
 .card img {
@@ -326,9 +306,7 @@ header .logo {
 }
 
 /*
-//
-//  Badges
-//
+  Badges
 */
 
 .card-badges {
@@ -350,30 +328,28 @@ header .logo {
 }
 
 .shopify {
-  background-color: var(--color-shopify);
+  background-color: #96bf48;
 }
 
 .full-stack {
-  background-color: var(--color-full-stack);
+  background-color: #ea4e56;
 }
 
 .javascript {
-  background-color: var(--color-javascript);
+  background-color: #f7df1e;
   color: var(--color-style-4);
 }
 
 .front-end {
-  background-color: var(--color-front-end);
+  background-color: #368ac2;
 }
 
 .wordpress {
-  background-color: var(--color-wordpress);
+  background-color: #21759b;
 }
 
 /*
-//
-//  Footer
-//
+  Footer
 */
 
 footer {
@@ -420,7 +396,12 @@ footer {
   }
 
   .hero-links {
-    justify-content: start;
+    justify-content: center;
+  }
+
+  .hero-links a {
+    margin: 0px;
+    padding: 3px 7px 3px 3px;
   }
 
   .hero-image-container {
@@ -433,6 +414,7 @@ footer {
 
   .hero-text {
     font-size: 1.3rem;
+    text-align: center;
   }
 
   .logo {
