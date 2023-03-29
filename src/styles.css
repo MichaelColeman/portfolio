@@ -347,12 +347,65 @@ header .logo {
 }
 
 /*
-  Footer
+  Contact Section
 */
 
-footer {
-  border-top: 1px solid var(--color-style-1);
-  min-height: 100px;
+.contact-section {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 0 auto;
+  /* border: 1px rgb(204, 176, 53) solid; */
+  max-width: var(--max-width-main);
+}
+
+.contact-form-container {
+  display: flex;
+  justify-content: center;
+  /* gap: 30px; */
+  border-radius: 15px;
+  background-color: #2e2e2e;
+  max-width: 645px;
+  height: 400px;
+}
+
+.text-aside {
+  /* padding-right: 30px; */
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  width: 50%;
+  height: 100%;
+}
+
+.form-image-container {
+  display: flex;
+  /* position: relative; */
+  flex-grow: 1;
+  align-items: flex-end;
+}
+
+.form-image-container img {
+  position: absolute;
+  /* bottom: 0; */
+}
+
+.form-image-1 {
+  padding: 0 0 3px 5px;
+}
+
+form {
+  padding: 25px;
+  /* display: flex; */
+  width: 50%;
+  line-height: 2rem;
+}
+
+form input,
+form textarea {
+  display: block;
+  border-bottom: 2px solid var(--color-style-3s);
+  background: #00000011;
+  width: 100%;
 }
 
 @media (max-width: 768px) {
