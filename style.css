@@ -411,9 +411,12 @@ footer {
 }
 
 @media (max-width: 480px) {
+  header {
+    margin-bottom: 40px;
+  }
+
   .hero-section {
     flex-direction: column;
-    margin-top: 50px;
   }
 
   .hero-links {
