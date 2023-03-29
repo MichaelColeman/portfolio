@@ -445,7 +445,12 @@ footer {
   }
 
   .tech-stack-list .line {
-    display: none;
+    width: 100%;
+  }
+
+  .tech-stack-list span {
+    width: 100%;
+    text-align: center;
   }
 
   .work {
