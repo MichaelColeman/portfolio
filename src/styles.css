@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bitter:wght@400;700&family=Open+Sans:wght@400;600;800&family=Source+Sans+Pro&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@400;700&family=Open+Sans:wght@400;600;800&family=Source+Sans+Pro&display=swap');
 
 :root {
   --color-style-1: #368ac2;
@@ -73,7 +73,7 @@ header {
   padding: 0px 40px 0px 40px;
   max-width: var(--max-width-main);
   min-height: 100px;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   white-space: nowrap;
 }
 
@@ -87,7 +87,7 @@ header nav {
 header nav a {
   color: var(--color-style-3);
   font-size: 0.875rem;
-  font-family: "Bitter", serif;
+  font-family: 'Bitter', serif;
   text-decoration: none;
 }
 
@@ -131,11 +131,7 @@ header .logo {
   box-shadow: 0px 0px 70px var(--color-style-1);
   border: 5px solid var(--color-style-5);
   border-radius: 50%;
-  background: linear-gradient(
-    -45deg,
-    var(--color-style-1) 40%,
-    var(--color-style-6) 60%
-  );
+  background: linear-gradient(-45deg, var(--color-style-1) 40%, var(--color-style-6) 60%);
   aspect-ratio: 1 / 1;
   overflow: hidden;
 }
@@ -154,7 +150,7 @@ header .logo {
   color: var(--color-style-3);
   font-weight: 600;
   font-size: 1.5rem;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .hero-bold {
@@ -170,7 +166,7 @@ header .logo {
   -webkit-background-clip: text;
   background-clip: text;
   font-weight: 800;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .hero-links {
@@ -193,7 +189,7 @@ header .logo {
   padding: 5px;
   color: var(--color-style-3);
   font-size: 0.875rem;
-  font-family: "Bitter", serif;
+  font-family: 'Bitter', serif;
   text-decoration: none;
 }
 
@@ -206,11 +202,7 @@ header .logo {
   position: absolute;
   left: 50px;
   border-radius: 3px;
-  background-image: linear-gradient(
-    to bottom,
-    var(--color-style-1),
-    var(--color-style-5)
-  );
+  background-image: linear-gradient(to bottom, var(--color-style-1), var(--color-style-5));
   width: 3px;
   height: 750px;
 }
@@ -231,7 +223,7 @@ header .logo {
   color: var(--color-style-3);
   font-weight: bold;
   font-size: 0.8rem;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   text-transform: uppercase;
 }
 
@@ -292,14 +284,14 @@ header .logo {
 }
 
 .card-text {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .card-title {
   margin-bottom: 1rem;
   font-weight: bold;
   font-size: 1.3rem;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   text-transform: uppercase;
 }
 
@@ -321,7 +313,7 @@ header .logo {
   color: #ffffff;
   font-weight: 700;
   font-size: 0.75rem;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   text-transform: uppercase;
 }
 
@@ -360,7 +352,7 @@ header .logo {
   display: flex;
   position: relative;
   justify-content: center;
-  margin: 0 auto 0 auto;
+  margin: 0 auto 50px auto;
   /* border: 1px rgb(204, 176, 53) solid; */
   max-width: var(--max-width-main);
 }
@@ -397,7 +389,7 @@ header .logo {
 }
 
 .form-text {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .form-image-1 {
@@ -406,7 +398,7 @@ header .logo {
 
 .contact-section .title {
   font-weight: 600;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 form {
@@ -424,7 +416,7 @@ form {
   width: 100%;
   color: #000000;
   font-weight: 600;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .form-submit:hover {
@@ -442,7 +434,7 @@ form textarea {
   padding-left: 10px;
   width: 100%;
   color: var(--color-style-3);
-  font-family: "Bitter", serif;
+  font-family: 'Bitter', serif;
 }
 
 form input:focus,
@@ -452,6 +444,28 @@ form textarea:focus {
 
 form textarea {
   height: 180px;
+}
+
+/*
+  Footer Section
+*/
+
+footer {
+  display: flex;
+  justify-content: center;
+  border-top: 2px solid var(--color-style-6);
+}
+
+.footer-container {
+  display: flex;
+  max-width: var(--max-width-main);
+  min-height: 100px;
+}
+
+.footer-text {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
 }
 
 @media (max-width: 768px) {
