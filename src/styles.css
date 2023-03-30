@@ -43,6 +43,9 @@ select {
 /*
   end css reset
 */
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   /* background-image: url(https://source.unsplash.com/l7R85WBKl1c); */
@@ -464,7 +467,7 @@ form textarea {
 
 footer {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   border-top: 2px solid var(--color-style-6);
   height: 75px;
 }
@@ -483,6 +486,7 @@ footer {
 
 footer .hero-links {
   gap: 30px;
+  padding-left: 50px;
 }
 
 @media (max-width: 768px) {
@@ -526,7 +530,16 @@ footer .hero-links {
 
   .work-title {
     justify-content: center;
+    padding-left: 0;
     font-size: 1.5rem;
+  }
+
+  footer {
+    justify-content: center;
+  }
+
+  footer .hero-links {
+    padding-left: 0;
   }
 }
 
@@ -614,9 +627,5 @@ footer .hero-links {
 
   .contact-section .text-aside {
     gap: 5px;
-  }
-
-  footer {
-    justify-content: center;
   }
 }
