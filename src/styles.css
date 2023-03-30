@@ -239,10 +239,21 @@ header .logo {
   Work Section
 */
 
+.work-title {
+  display: flex;
+  margin: 0 0 50px 25px;
+  padding-left: 25px;
+  font-weight: 800;
+  font-size: 1.5rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-decoration: underline;
+}
+
 .work {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  margin: 150px auto 150px auto;
+  margin: 100px auto 150px auto;
   padding: 0px 40px 0px 40px;
   max-width: var(--max-width-main);
   color: var(--color-style-3);
@@ -429,6 +440,7 @@ form textarea {
   margin-bottom: 15px;
   border: none;
   border-bottom: 2px solid var(--color-style-3);
+  border-radius: 4px;
   background: #00000066;
   /* background-color: #21759b; */
   padding-left: 10px;
@@ -452,20 +464,25 @@ form textarea {
 
 footer {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   border-top: 2px solid var(--color-style-6);
+  height: 75px;
 }
 
 .footer-container {
   display: flex;
   max-width: var(--max-width-main);
-  min-height: 100px;
+  /* min-height: 100px; */
 }
 
 .footer-text {
   display: flex;
   align-items: center;
   white-space: nowrap;
+}
+
+footer .hero-links {
+  gap: 30px;
 }
 
 @media (max-width: 768px) {
@@ -491,6 +508,10 @@ footer {
     flex-direction: column;
   }
 
+  .card-image-container {
+    align-self: center;
+  }
+
   .card-aside {
     align-self: center;
     max-width: 400px;
@@ -501,6 +522,11 @@ footer {
     /* top: 10px; */
     /* right: 0; */
     display: none;
+  }
+
+  .work-title {
+    justify-content: center;
+    font-size: 1.5rem;
   }
 }
 
@@ -569,7 +595,6 @@ footer {
   .contact-form-container .text-aside {
     padding-top: 15px;
     padding-bottom: 15px;
-    /* flex-direction: row; */
     width: 100%;
     height: fit-content;
   }
@@ -582,8 +607,16 @@ footer {
     width: 100%;
   }
 
-  form .text-aside {
-    color: black;
+  .contact-form-container h1 {
+    /* color: black; */
     text-align: center;
+  }
+
+  .contact-section .text-aside {
+    gap: 5px;
+  }
+
+  footer {
+    justify-content: center;
   }
 }
