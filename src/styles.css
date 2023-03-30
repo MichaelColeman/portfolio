@@ -250,7 +250,7 @@ header .logo {
 .work {
   display: flex;
   justify-content: center;
-  margin: 125px auto 125px auto;
+  margin: 150px auto 150px auto;
   padding: 0px 40px 0px 40px;
   max-width: var(--max-width-main);
   color: var(--color-style-3);
@@ -350,8 +350,15 @@ header .logo {
   Contact Section
 */
 
+.form-bg-image {
+  position: absolute;
+  top: -45px;
+  right: 100px;
+}
+
 .contact-section {
   display: flex;
+  position: relative;
   justify-content: center;
   margin: 0 auto 0 auto;
   /* border: 1px rgb(204, 176, 53) solid; */
@@ -361,9 +368,8 @@ header .logo {
 .contact-form-container {
   display: flex;
   justify-content: center;
-  /* gap: 30px; */
   border-radius: 15px;
-  background-color: #2e2e2e;
+  background-color: #20202075;
   max-width: 645px;
   height: 400px;
 }
@@ -372,8 +378,9 @@ header .logo {
   /* padding-right: 30px; */
   display: flex;
   flex-direction: column;
+  gap: 20px;
   padding: 25px;
-  width: 50%;
+  width: 40%;
   height: 100%;
 }
 
@@ -389,23 +396,62 @@ header .logo {
   /* bottom: 0; */
 }
 
+.form-text {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
 .form-image-1 {
   padding: 0 0 3px 5px;
+}
+
+.contact-section .title {
+  font-weight: 600;
+  font-family: "Open Sans", sans-serif;
 }
 
 form {
   padding: 25px;
   /* display: flex; */
-  width: 50%;
+  width: 60%;
   line-height: 2rem;
+}
+
+.form-submit {
+  /* margin-top: 20px; */
+  border: none;
+  border-radius: 5px;
+  background-color: var(--color-style-1);
+  width: 100%;
+  color: #000000;
+  font-weight: 600;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.form-submit:hover {
+  box-shadow: 0 0 5px var(--color-style-6);
 }
 
 form input,
 form textarea {
   display: block;
-  border-bottom: 2px solid var(--color-style-3s);
-  background: #00000011;
+  margin-bottom: 15px;
+  border: none;
+  border-bottom: 2px solid var(--color-style-3);
+  background: #00000066;
+  /* background-color: #21759b; */
+  padding-left: 10px;
   width: 100%;
+  color: var(--color-style-3);
+  font-family: "Bitter", serif;
+}
+
+form input:focus,
+form textarea:focus {
+  border-bottom-color: #00000000;
+}
+
+form textarea {
+  height: 180px;
 }
 
 @media (max-width: 768px) {
@@ -434,6 +480,13 @@ form textarea {
   .card-aside {
     align-self: center;
     max-width: 400px;
+  }
+
+  .form-bg-image {
+    /* position: absolute; */
+    /* top: 10px; */
+    /* right: 0; */
+    display: none;
   }
 }
 
@@ -487,7 +540,36 @@ form textarea {
   }
 
   .work {
-    margin: 75px auto 75px auto;
+    margin: 100px auto 100px auto;
     padding: 0px 20px 0px 20px;
+  }
+
+  .contact-form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 550px;
+  }
+
+  .contact-form-container .text-aside {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    /* flex-direction: row; */
+    width: 100%;
+    height: fit-content;
+  }
+
+  .form-image-container {
+    display: none;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  form .text-aside {
+    color: black;
+    text-align: center;
   }
 }

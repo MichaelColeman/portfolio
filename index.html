@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./dist/styles.css" />
+    <link rel="stylesheet" href="./src/styles.css" />
     <script src="./app.js" defer></script>
     <title>Tommy Coleman</title>
   </head>
@@ -134,10 +134,12 @@
         <!-- <div class="long-line"></div> -->
       </section>
       <section class="contact-section">
-        <!-- <img class="form-bg-image" src="" alt="form background" /> -->
-        <div class="contact-form-container">
+        <div class="form-bg-image">
+          <img src="./img/dot pattern.svg" alt="form background" />
+        </div> 
+        <div class="contact-form-container blur-bg">
           <div class="text-aside">
-            <h1 class="contact-title">Contact Me</h1>
+            <h1 class="title">Contact Me</h1>
             <p class="form-text">
               Have a project idea? Job offer? Fill this space with random text
               so that you can stay focused with programming. Thanks!
@@ -155,8 +157,10 @@
               placeholder="Name"
             />
             <input type="email" name="email" id="email" placeholder="Email address" />
-            <textarea name="message" id="message" cols="30" rows=4" placeholder="Message"></textarea>
-            <input type="submit" value="Submit">
+            <div class="textarea-container">
+            <textarea name="message" id="message" rows=5" placeholder="Message"></textarea>
+            </div>
+            <input class="form-submit" type="button" value="Send Message"/>
           </form>
         </div>
       </section>
