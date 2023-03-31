@@ -336,17 +336,18 @@ header .logo {
 .contact-form-container {
   display: flex;
   justify-content: center;
+  gap: 50px;
   border-radius: 15px;
   background-color: #20202075;
+  padding: 25px;
   max-width: 645px;
-  height: 400px;
+  height: 450px;
 }
 
 .text-aside {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding: 25px;
   width: 40%;
   height: 100%;
 }
@@ -375,22 +376,23 @@ header .logo {
 }
 
 form {
-  padding: 25px;
   width: 60%;
   line-height: 2rem;
 }
 
-.form-submit {
+form button[type='submit'] {
   border: none;
   border-radius: 5px;
   background-color: var(--color-style-1);
+  padding: 10px;
   width: 100%;
   color: #000000;
   font-weight: 600;
+  font-size: 1rem;
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-.form-submit:hover {
+form button[type='submit']:hover {
   box-shadow: 0 0 5px var(--color-style-6);
 }
 
@@ -399,23 +401,25 @@ form textarea {
   display: block;
   margin-bottom: 15px;
   border: none;
-  border-bottom: 2px solid var(--color-style-3);
+  /* border-bottom: 2px solid var(--color-style-3); */
   border-radius: 4px;
-  background: #00000066;
   padding-left: 10px;
   width: 100%;
-  color: var(--color-style-3);
   font: inherit;
   font-family: 'Bitter', serif;
 }
 
-form input:focus,
-form textarea:focus {
-  border-bottom-color: #00000000;
+form label {
+  padding-left: 5px;
+  font-family: 'Bitter', serif;
 }
 
 form textarea {
-  height: 180px;
+  height: 150px;
+}
+
+form address {
+  display: inline;
 }
 
 /*
@@ -558,8 +562,7 @@ footer .hero-links {
   }
 
   .contact-form-container .text-aside {
-    padding-top: 15px;
-    padding-bottom: 15px;
+    gap: 30px;
     width: 100%;
     height: fit-content;
   }

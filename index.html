@@ -126,17 +126,13 @@
             </div>
           </article>
         </div>
-        <!-- <div class="long-line"></div> -->
       </section>
       <section id="contact" class="contact-section">
-        <!-- <div class="form-bg-image">
-          <img src="./img/dot pattern.svg" alt="form background" />
-        </div> -->
         <div class="contact-form-container blur-bg">
           <div class="text-aside">
             <h1 class="title">Contact Me</h1>
             <p class="form-text">
-              Have a project idea? Job offer? Fill this space with random et lorem ipsum dolar emit. Thanks!
+              Have a project or idea in mind? Send me a message or connect with me on Linkedin. Thanks!
             </p>
             <div class="form-image-container">
               <img class="form-image-1" src="./img/big circle.svg" alt="" />
@@ -144,13 +140,38 @@
             </div>
           </div>
           <form action="">
-            <!-- <label for="first-name"></label> -->
-            <input type="text" name="first-name" id="first-name" placeholder="Name" />
-            <input type="email" name="email" id="email" placeholder="Email address" />
-            <!-- <div class="textarea-container"> -->
-            <textarea name="message" id="message" rows="5" placeholder="Message"></textarea>
-            <!-- </div> -->
-            <input class="form-submit" type="button" value="Send Message" />
+            <label for="name">Name</label>
+            <input
+              required
+              minlength="2"
+              spellcheck="false"
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Name"
+              autocomplete="name"
+            />
+            <label for="email">Email address</label>
+            <input
+              required
+              spellcheck="false"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email address"
+              autocomplete="email"
+            />
+            <label for="message">Message</label>
+            <textarea
+              required
+              minlength="5"
+              maxlength="2000"
+              spellcheck="true"
+              name="message"
+              id="message"
+              placeholder="Message"
+            ></textarea>
+            <button type="submit">Send Message</button>
           </form>
         </div>
       </section>
