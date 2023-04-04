@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./src/styles.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript" src="./index.js" defer></script>
     <title>Tommy Coleman</title>
   </head>
   <body id="home">
@@ -61,17 +63,18 @@
               <div class="card-text">
                 <div class="card-title">Wordle Clone</div>
                 <div class="card-text">
-                  A clone of the popular word game. There are many variations of passages of Lorem Ipsum available, but
-                  the majority have suffered alteration in some form, by injected humour
+                  Check out this clone of the wildly popular word game made by The New York Times. I built this With
+                  plain HTML, CSS, and JavaScript. The game layout is responsive, adapting to both mobile and desktop
+                  screens.
                 </div>
               </div>
               <div class="card-badges">
-                <div class="badge full-stack">Full Stack</div>
+                <div class="badge front-end">Front End</div>
                 <div class="badge javascript">Javascript</div>
               </div>
             </div>
           </article>
-          <article class="card">
+          <!-- <article class="card">
             <div class="card-image-container">
               <img src="./img/wordle-screenshot.svg" alt="" />
             </div>
@@ -124,7 +127,7 @@
                 <div class="badge javascript">Javascript</div>
               </div>
             </div>
-          </article>
+          </article> -->
         </div>
       </section>
       <section id="contact" class="contact-section">
@@ -139,7 +142,7 @@
               <img class="form-image-2" src="./img/prismatic-triangle.svg" alt="" />
             </div>
           </div>
-          <form action="">
+          <form id="formjs" action="">
             <label for="name">Name</label>
             <input
               required

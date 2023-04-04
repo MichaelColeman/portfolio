@@ -14,5 +14,8 @@
     "eslint": "^8.37.0",
     "postcss": "^8.4.21",
     "postcss-cli": "^10.1.0"
+  },
+  "dependencies": {
+    "@emailjs/browser": "^3.10.0"
   }
 }
