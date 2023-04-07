@@ -143,38 +143,30 @@
             </div>
           </div>
           <form id="formjs" action="">
-            <label for="name">Name</label>
-            <input
-              required
-              minlength="2"
-              spellcheck="false"
-              type="text"
-              name="name"
-              id="name"
-              placeholder="Name"
-              autocomplete="name"
-            />
-            <label for="email">Email address</label>
-            <input
-              required
-              spellcheck="false"
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Email address"
-              autocomplete="email"
-            />
-            <label for="message">Message</label>
-            <textarea
-              required
-              minlength="5"
-              maxlength="2000"
-              spellcheck="true"
-              name="message"
-              id="message"
-              placeholder="Message"
-            ></textarea>
-            <button type="submit">Send Message</button>
+            <div class="input-container">
+              <label for="name">Name</label>
+              <input required minlength="2" spellcheck="false" type="text" name="name" id="name" autocomplete="name" />
+            </div>
+            <div class="input-container">
+              <label for="email">Email address</label>
+              <input required spellcheck="false" type="email" name="email" id="email" autocomplete="email" />
+            </div>
+            <div class="input-container">
+              <label for="message">Message</label>
+              <textarea
+                required
+                minlength="5"
+                maxlength="2000"
+                spellcheck="true"
+                name="message"
+                id="message"
+              ></textarea>
+            </div>
+
+            <button type="submit">
+              <i class="send-icon"></i>
+              <span>Send Message</span>
+            </button>
           </form>
         </div>
       </section>

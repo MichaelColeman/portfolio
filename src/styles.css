@@ -354,12 +354,14 @@ header .logo {
 
 .form-image-container {
   display: flex;
+  position: relative;
   flex-grow: 1;
   align-items: flex-end;
 }
 
 .form-image-container img {
   position: absolute;
+  bottom: 10px;
 }
 
 .form-text {
@@ -376,54 +378,82 @@ header .logo {
 }
 
 form {
+  /* position: relative; */
   width: 60%;
   line-height: 2rem;
 }
 
+.input-container {
+  position: relative;
+}
+
+form input,
+form textarea {
+  display: block;
+  position: relative;
+  margin-bottom: 30px;
+  border: 1px solid var(--color-style-5);
+  border-radius: 4px;
+  background-color: var(--color-style-4);
+  padding-left: 10px;
+  width: 100%;
+  color: var(--color-style-3);
+  line-height: 4ex;
+  font-family: 'Bitter', serif;
+}
+
+form input:focus,
+form textarea:focus {
+  border: 1px purple solid;
+}
+
+form label {
+  position: absolute;
+  top: -2ex;
+  left: 1.5em;
+  z-index: 1;
+  background-color: var(--color-style-4);
+  padding: 0 5px;
+  color: var(--color-style-3);
+  font-family: 'Bitter', serif;
+}
+
+form textarea {
+  height: 200px;
+}
+
 form button[type='submit'] {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  /* margin: 0 auto; */
   border: none;
   border-radius: 5px;
   background-color: var(--color-style-1);
   padding: 10px;
-  width: 100%;
+  width: 50%;
+}
+
+form button span {
   color: #000000;
   font-weight: 600;
   font-size: 1rem;
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+.send-icon {
+  transform: rotate(-30deg);
+  height: 20px;
+  content: url('../img/MaterialSymbolsSendRounded.svg');
+}
+
 form button[type='submit']:hover {
   box-shadow: 0 0 5px var(--color-style-6);
 }
 
-form input,
-form textarea {
-  display: block;
-  margin-bottom: 15px;
-  border: none;
-  /* border-bottom: 2px solid var(--color-style-3); */
-  border-radius: 4px;
-  padding-left: 10px;
-  width: 100%;
-  font: inherit;
-  font-family: 'Bitter', serif;
-}
-
-form label {
-  padding-left: 5px;
-  font-family: 'Bitter', serif;
-}
-
-form textarea {
-  height: 150px;
-}
-
-form address {
-  display: inline;
-}
-
 /*
-  Footer Section
+Footer Section
 */
 footer {
   display: flex;
