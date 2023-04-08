@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./dist/styles.css" />
+    <link rel="stylesheet" href="./src/styles.css" />
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript" src="./index.js" defer></script>
     <title>Tommy Coleman</title>
@@ -48,20 +48,22 @@
         <img src="./img/javascript-svgrepo-com 1.svg" alt="javascript" />
         <img src="./img/html-5-svgrepo-com 1.svg" alt="html" />
         <img src="./img/css-3-svgrepo-com 1.svg" alt="css" />
-        <img src="./img/nodejs-svgrepo-com 1.svg" alt="nodejs" />
-        <img src="./img/prisma-2 1.svg" alt="prisma" />
+        <!-- <img src="./img/nodejs-svgrepo-com 1.svg" alt="nodejs" /> -->
+        <!-- <img src="./img/prisma-2 1.svg" alt="prisma" /> -->
         <div class="line"></div>
       </div>
-      <section id="projects" class="work">
-        <h1 class="work-title">Projects</h1>
+      <section id="projects" class="projects">
+        <h1 class="projects-title">Projects</h1>
         <div class="cards-container">
           <article class="card">
-            <div class="card-image-container">
-              <img src="./img/wordle-screenshot.svg" alt="" />
-            </div>
+            <a href="https://michaelcoleman.github.io/wordle-clone/">
+              <div class="card-image-container">
+                <img src="./img/wordle-screenshot.svg" alt="Worldle Clone Screenshot" />
+              </div>
+            </a>
             <div class="card-aside">
               <div class="card-text">
-                <div class="card-title">Wordle Clone</div>
+                <a href="https://michaelcoleman.github.io/wordle-clone/"><div class="card-title">Wordle Clone</div></a>
                 <div class="card-text">
                   Check out this clone of the wildly popular word game made by The New York Times. I built this With
                   plain HTML, CSS, and JavaScript. The game layout is responsive, adapting to both mobile and desktop
@@ -74,60 +76,6 @@
               </div>
             </div>
           </article>
-          <!-- <article class="card">
-            <div class="card-image-container">
-              <img src="./img/wordle-screenshot.svg" alt="" />
-            </div>
-            <div class="card-aside">
-              <div class="card-text">
-                <div class="card-title">Wordle Clone</div>
-                <div class="card-text">
-                  A clone of the popular word game. There are many variations of passages of Lorem Ipsum available, but
-                  the majority have suffered alteration in some form, by injected humour
-                </div>
-              </div>
-              <div class="card-badges">
-                <div class="badge full-stack">Full Stack</div>
-                <div class="badge javascript">Javascript</div>
-              </div>
-            </div>
-          </article>
-          <article class="card">
-            <div class="card-image-container">
-              <img src="./img/wordle-screenshot.svg" alt="" />
-            </div>
-            <div class="card-aside">
-              <div class="card-text">
-                <div class="card-title">Wordle Clone</div>
-                <div class="card-text">
-                  A clone of the popular word game. There are many variations of passages of Lorem Ipsum available, but
-                  the majority have suffered alteration in some form, by injected humour
-                </div>
-              </div>
-              <div class="card-badges">
-                <div class="badge full-stack">Full Stack</div>
-                <div class="badge javascript">Javascript</div>
-              </div>
-            </div>
-          </article>
-          <article class="card">
-            <div class="card-image-container">
-              <img src="./img/wordle-screenshot.svg" alt="" />
-            </div>
-            <div class="card-aside">
-              <div class="card-text">
-                <div class="card-title">Wordle Clone</div>
-                <div class="card-text">
-                  A clone of the popular word game. There are many variations of passages of Lorem Ipsum available, but
-                  the majority have suffered alteration in some form, by injected humour
-                </div>
-              </div>
-              <div class="card-badges">
-                <div class="badge full-stack">Full Stack</div>
-                <div class="badge javascript">Javascript</div>
-              </div>
-            </div>
-          </article> -->
         </div>
       </section>
       <section id="contact" class="contact-section">
@@ -162,7 +110,6 @@
                 id="message"
               ></textarea>
             </div>
-
             <button type="submit">
               <i class="send-icon"></i>
               <span>Send Message</span>

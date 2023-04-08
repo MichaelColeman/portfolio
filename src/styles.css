@@ -205,9 +205,9 @@ header .logo {
 }
 
 /*
-  Work Section
+  projects Section
 */
-.work-title {
+.projects-title {
   display: flex;
   margin: 0 0 50px 25px;
   padding-left: 25px;
@@ -217,7 +217,7 @@ header .logo {
   text-decoration: underline;
 }
 
-.work {
+.projects {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -244,14 +244,13 @@ header .logo {
 
 .card-image-container {
   display: flex;
-  min-width: 275px;
-  max-width: 500px;
+  max-width: 450px;
 }
 
 .card img {
   box-shadow: 0px 0px 10px #dadada49;
   border-radius: 10px;
-  object-fit: fill;
+  object-fit: cover;
 }
 
 .card-aside {
@@ -268,10 +267,20 @@ header .logo {
 
 .card-title {
   margin-bottom: 0.5rem;
+  color: var(--color-style-3);
   font-weight: bold;
   font-size: 1.3rem;
   font-family: 'Open Sans', sans-serif;
+  text-decoration: underline;
   text-transform: uppercase;
+}
+
+.card-title::after {
+  content: url('../img/external-link.svg');
+}
+
+.card-title:hover {
+  color: var(--color-style-1);
 }
 
 /*
@@ -514,7 +523,7 @@ footer .hero-links {
     display: none;
   }
 
-  .work-title {
+  .projects-title {
     justify-content: center;
     padding-left: 0;
     font-size: 1.5rem;
@@ -578,7 +587,7 @@ footer .hero-links {
     text-align: center;
   }
 
-  .work {
+  .projects {
     margin: 100px auto 100px auto;
     padding: 0px 20px 0px 20px;
   }
