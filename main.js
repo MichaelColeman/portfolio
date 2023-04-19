@@ -4,6 +4,8 @@ if (!submitButton) {
   console.warn('submit button not found')
 }
 
+const submitButtonText = document.getElementById('submit-button-text')
+
 //bind to form
 const form = document.getElementById('formjs')
 
@@ -18,7 +20,25 @@ if (!form) {
   })
 }
 
+function updateSubmitButton(status) {
+  submitButton.className = status
+
+  if (status === 'pending') {
+    submitButtonText.innerText = 'Sending...'
+  }
+
+  if (status === 'success') {
+    submitButtonText.innerText = 'Message sent!'
+  }
+
+  if (status === 'failure') {
+    submitButtonText.innerText = 'Something went wrong...'
+  }
+}
+
 async function submitForm(form) {
+  updateSubmitButton('pending')
+
   //construct the form
   const data = new FormData(form)
   data.append('service_id', 'default_service')
@@ -29,24 +49,23 @@ async function submitForm(form) {
   }
 
   //send the form
-  // try {
-  //   const response = await fetch('https://api.emailjs.com/api/v1.0/email/send-form', {
-  //     method: 'POST',
-  //     body: data,
-  //   })
-  //
-  //   console.log(response.status)
-  // } catch (error) {
-  //   console.log(`fetch?: ${error}`)
-  // }
+  try {
+    const response = await fetch('https://api.emailjs.com/api/v1.0/email/send-form', {
+      method: 'POST',
+      body: data,
+    })
+    // const response = 200
+    const status = response.status
 
-  const status = 200
-  if (status === 200) {
-    // on success, indicate to the user that the message sent was sucessful
-    console.log('success')
-    submitButton.style.backgroundColor = 'green'
-  } else {
-    // on failure (400 respose or similar), indicate to the user that the message send was a fail
-    console.log('fail')
+    console.log(status)
+
+    if (status === 200) {
+      updateSubmitButton('success')
+      form.reset()
+    } else {
+      updateSubmitButton('failure')
+    }
+  } catch (error) {
+    console.log(`fetch?: ${error}`)
   }
 }
