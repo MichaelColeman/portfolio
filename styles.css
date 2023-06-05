@@ -322,7 +322,7 @@ section.hero-section {
 .badge {
   display: inline-block;
   margin-right: 5px;
-  border-radius: 10px;
+  border-radius: 8px;
   background-color: var(--color-style-2);
   padding: 2px 10px 2px 10px;
   max-width: -webkit-fit-content;
@@ -349,7 +349,7 @@ section.hero-section {
 }
 
 .front-end {
-  background-color: #368ac2;
+  background-color: #143449;
 }
 
 .wordpress {
