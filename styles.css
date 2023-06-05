@@ -1,12 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Bitter:wght@400;700&family=Open+Sans:wght@400;600;800&family=Source+Sans+Pro&display=swap');
 
+/*
+  set global defaults
+*/
 :root {
   --color-style-1: #368ac2;
   --color-style-2: #5f5f5f;
   --color-style-3: #dadada;
-  --color-style-4: #242424;
-  --color-style-5: #6b9396;
+  --color-style-4: #333333;
+  --color-style-5: #317db0;
   --color-style-6: #69c8d6;
+  --color-style-7: #c8c8ce;
+  --color-submit-button: var(--color-style-6);
   --max-width-main: 1300px;
 }
 
@@ -23,6 +28,7 @@
 html {
   scroll-behavior: smooth;
 }
+
 img,
 svg {
   display: block;
@@ -34,10 +40,31 @@ body {
   color: var(--color-style-3);
   line-height: 1.5;
 }
-
+--color-style-7
+/* 
+  Utility Classes 
+*/
 .blur-bg {
   -webkit-backdrop-filter: blur(40px);
   backdrop-filter: blur(40px);
+}
+
+svg#wave {
+  height: 75px;
+  width: 100vw;
+  max-width: var(--max-width-main);
+  text-align: center;
+  display: block;
+  margin: auto;
+}
+
+svg#wave.projects-wave {
+  fill: var(--color-style-5);
+}
+
+svg#wave.contact-wave {
+  fill: var(--color-style-7);
+  background-color: var(--color-style-5);
 }
 
 /*
@@ -45,6 +72,7 @@ body {
 */
 header {
   display: flex;
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   flex-wrap: wrap;
@@ -93,15 +121,15 @@ header .logo {
 /*
   Hero Section
 */
-.hero-section {
+section.hero-section {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 30px;
-  margin: 0 auto 0 auto;
+  margin: 2rem auto 0 auto;
   padding: 0px 40px 10px 40px;
   max-width: var(--max-width-main);
-  height: 400px;
+  height: 350px;
 }
 
 .hero-image-container {
@@ -152,7 +180,9 @@ header .logo {
 .hero-links {
   display: flex;
   justify-content: center;
-  width: 100%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .hero-links img {
@@ -186,15 +216,12 @@ header .logo {
   justify-content: center;
   align-items: center;
   gap: 18px;
-  padding: 0px 40px 10px 40px;
-}
-
-.tech-stack-list {
   color: var(--color-style-3);
   font-weight: bold;
   font-size: 0.8rem;
   font-family: 'Source Sans Pro', sans-serif;
   text-transform: uppercase;
+  margin-bottom: 60px;
 }
 
 .tech-stack-list .line {
@@ -208,24 +235,23 @@ header .logo {
 /*
   projects Section
 */
-.projects-title {
-  display: flex;
-  margin: 0 0 50px 25px;
-  padding-left: 25px;
-  font-weight: 800;
-  font-size: 1.5rem;
-  font-family: 'Source Sans Pro', sans-serif;
-  text-decoration: underline;
-}
-
 .projects {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 100px auto 150px auto;
-  padding: 0px 40px 0px 40px;
+  margin: 0 auto 0 auto;
+  padding: 0px 50px 150px 50px;
   max-width: var(--max-width-main);
   color: var(--color-style-3);
+  background-color: var(--color-style-5);
+}
+
+.projects-title {
+  margin: 0 0 50px 0;
+  text-align: center;
+  font-weight: 800;
+  font-size: 2rem;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .card:nth-child(even) {
@@ -271,13 +297,14 @@ header .logo {
   margin-bottom: 0.5rem;
   color: var(--color-style-3);
   font-weight: bold;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-family: 'Open Sans', sans-serif;
   text-decoration: underline;
   text-transform: uppercase;
 }
 
 .card-title::after {
+  padding-left: 8px;
   content: url('../img/external-link.svg');
 }
 
@@ -298,6 +325,7 @@ header .logo {
   border-radius: 10px;
   background-color: var(--color-style-2);
   padding: 2px 10px 2px 10px;
+  max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
   max-width: fit-content;
   color: #ffffff;
@@ -341,25 +369,26 @@ header .logo {
   display: flex;
   position: relative;
   justify-content: center;
-  margin: 0 auto 50px auto;
+  margin: 0 auto 0 auto;
+  padding-bottom: 50px;
   max-width: var(--max-width-main);
+  background-color: var(--color-style-7);
 }
 
 .contact-form-container {
   display: flex;
   justify-content: center;
-  gap: 50px;
+  gap: 25px;
   border-radius: 15px;
-  background-color: #20202075;
+  background-color: var(--color-style-5);
   padding: 25px;
   max-width: 645px;
-  height: 450px;
 }
 
 .text-aside {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 40px;
   width: 40%;
   height: 100%;
 }
@@ -378,6 +407,7 @@ header .logo {
 
 .form-text {
   font-family: 'Source Sans Pro', sans-serif;
+  text-align: center;
 }
 
 .form-image-1 {
@@ -387,29 +417,24 @@ header .logo {
 .contact-section .title {
   font-weight: 600;
   font-family: 'Open Sans', sans-serif;
+  text-align: center;
 }
 
 form {
-  /* position: relative; */
   width: 60%;
   line-height: 2rem;
-}
-
-.input-container {
-  position: relative;
 }
 
 form input,
 form textarea {
   display: block;
   position: relative;
-  margin-bottom: 30px;
   border: 1px solid var(--color-style-5);
   border-radius: 4px;
-  background-color: var(--color-style-4);
+  background-color: var(--color-style-7);
   padding-left: 10px;
   width: 100%;
-  color: var(--color-style-3);
+  color: black;
   line-height: 4ex;
   font-family: 'Bitter', serif;
 }
@@ -419,56 +444,50 @@ form textarea:focus {
   border: 1px purple solid;
 }
 
-form label {
-  position: absolute;
-  top: -2ex;
-  left: 1.5em;
-  z-index: 1;
-  background-color: var(--color-style-4);
-  padding: 0 5px;
-  color: var(--color-style-3);
-  font-family: 'Bitter', serif;
+form textarea {
+  resize: vertical;
+  height: 150px;
 }
 
-form textarea {
-  height: 200px;
+form label {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 20px;
+  color: var(--color-style-3);
+  font-family: 'Bitter', serif;
+  text-indent: 10px;
+  /* text-decoration: underline; */
 }
 
 form button {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  /* margin: 0 auto; */
+  display: block;
+  margin: 0 auto;
   border: none;
   border-radius: 5px;
-  background-color: var(--color-style-1);
-  padding: 10px;
-  width: 75%;
-  font-family: 'Open Sans', sans-serif;
-}
-button.pending {
-  background-color: var(--color-style-1);
+  background-color: var(--color-submit-button);
+  padding: 8px;
+  width: 60%;
 }
 
-button.success {
-  background-color: green;
-}
-
-button.failure {
-  background-color: red;
+.success {
+  background-color: rgb(49, 240, 91);
 }
 
 form button span {
-  color: #000000;
+  color: #1f1f1f;
   font-weight: 600;
   font-size: 1rem;
   font-family: 'Source Sans Pro', sans-serif;
+  padding-bottom: 1px;
+  vertical-align: middle;
+  text-align: center;
+  margin: auto;
+  line-height: 2rem;
 }
 
 .send-icon {
   transform: rotate(-30deg);
-  height: 20px;
+  height: 18px;
   content: url('../img/MaterialSymbolsSendRounded.svg');
 }
 
@@ -482,13 +501,13 @@ Footer Section
 footer {
   display: flex;
   justify-content: flex-start;
-  border-top: 2px solid var(--color-style-6);
+  border-top: 4px solid var(--color-style-5);
   height: 75px;
+  background-color: var(--color-style-4);
 }
 
 .footer-container {
   display: flex;
-  max-width: var(--max-width-main);
 }
 
 .footer-text {
@@ -500,6 +519,7 @@ footer {
 footer .hero-links {
   gap: 30px;
   padding-left: 50px;
+  color: black;
 }
 
 @media (max-width: 768px) {
@@ -526,12 +546,13 @@ footer .hero-links {
   }
 
   .card-image-container {
-    align-self: center;
+    margin: 0 auto 0 auto;
   }
 
   .card-aside {
     align-self: center;
     max-width: 400px;
+    gap: 2rem;
   }
 
   .form-bg-image {
@@ -618,6 +639,7 @@ footer .hero-links {
   .contact-form-container .text-aside {
     gap: 30px;
     width: 100%;
+    height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
   }
