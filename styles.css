@@ -380,7 +380,7 @@ section.hero-section {
   justify-content: center;
   gap: 25px;
   border-radius: 15px;
-  background-color: var(--color-style-5);
+  background-color: var(--color-style-4);
   padding: 25px;
   max-width: 645px;
 }
