@@ -72,8 +72,8 @@ svg#wave.contact-wave {
 */
 header {
   display: flex;
-  position: -webkit-sticky;
-  position: sticky;
+  /* position: -webkit-sticky; */
+  /* position: sticky; */
   top: 0;
   flex-wrap: wrap;
   justify-content: space-between;
